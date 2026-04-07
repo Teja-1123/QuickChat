@@ -121,6 +121,11 @@ JWT_SECRET=your_secret_key
 
 ---
 
+## 🌐 Live Demo
+
+Frontend: https://quick-chat-brown.vercel.app  
+Backend: https://quickchat-rf20.onrender.com
+
 ## 🚀 Future Improvements
 
 - Online/offline user status  
