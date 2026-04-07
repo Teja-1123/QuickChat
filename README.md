@@ -26,6 +26,9 @@ A modern real-time chat application with group chats, direct messaging, and file
 
 ## 📂 Project Structure
 
+## 📂 Project Structure
+
+```bash
 QuickChat/
 ├── server/
 │   ├── models/
@@ -41,7 +44,7 @@ QuickChat/
 │   │   ├── hooks/
 │   │   ├── utils/
 │   │   └── styles/
-
+```
 ---
 
 ## ⚙️ Installation & Setup
