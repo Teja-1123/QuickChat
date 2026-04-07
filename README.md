@@ -29,12 +29,11 @@ QuickChat is a real-time chat application that allows users to communicate insta
 
 ---
 
-chat/
-├── package.json             
+QuickChat/
 ├── server/
 │   ├── package.json
 │   ├── .env.example
-│   ├── index.js             
+│   ├── index.js
 │   ├── models/
 │   │   ├── User.js
 │   │   ├── Room.js
@@ -44,33 +43,39 @@ chat/
 │   │   ├── rooms.js
 │   │   ├── messages.js
 │   │   └── upload.js
-│   ├── middleware/auth.js
-│   ├── socket/socketHandler.js
+│   ├── middleware/
+│   │   └── auth.js
+│   ├── socket/
+│   │   └── socketHandler.js
 │   └── uploads/
-└── client/                  
-    ├── package.json
-    ├── vite.config.js       
-    ├── index.html            
-    └── src/
-        ├── main.jsx         
-        ├── App.jsx
-        ├── styles/globals.css
-        ├── utils/api.js
-        ├── context/
-        │   ├── AuthContext.jsx
-        │   └── SocketContext.jsx
-        ├── hooks/
-        │   ├── useRooms.js
-        │   └── useMessages.js
-        └── components/
-            ├── Auth/AuthPage.jsx
-            └── Chat/
-                ├── Sidebar.jsx
-                ├── ChatWindow.jsx
-                ├── MessageBubble.jsx
-                ├── MessageInput.jsx
-                ├── NewRoomModal.jsx
-                └── RoomInfo.jsx
+│
+├── client/
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── index.html
+│   └── src/
+│       ├── main.jsx
+│       ├── App.jsx
+│       ├── styles/
+│       │   └── globals.css
+│       ├── utils/
+│       │   └── api.js
+│       ├── context/
+│       │   ├── AuthContext.jsx
+│       │   └── SocketContext.jsx
+│       ├── hooks/
+│       │   ├── useRooms.js
+│       │   └── useMessages.js
+│       └── components/
+│           ├── Auth/
+│           │   └── AuthPage.jsx
+│           ├── Chat/
+│           │   ├── Sidebar.jsx
+│           │   ├── ChatWindow.jsx
+│           │   ├── MessageBubble.jsx
+│           │   ├── MessageInput.jsx
+│           │   ├── NewRoomModal.jsx
+│           │   └── RoomInfo.jsx
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the repository
