@@ -3,8 +3,9 @@ const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
 const cors = require('cors');
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const path = require('path');
+
 
 const authRoutes    = require('./routes/auth');
 const roomRoutes    = require('./routes/rooms');
@@ -24,7 +25,7 @@ const io     = new Server(server, {
 });
 
 /* ── Middleware ─────────────────────────────────────────────────── */
-app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5173', credentials: true }));
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
@@ -37,10 +38,12 @@ app.get('/api/health',   (_req, res) => res.json({ ok: true }));
 
 /* ── WebSocket ──────────────────────────────────────────────────── */
 setupSocket(io);
+console.log("MONGO_URI:", process.env.MONGO_URI);
+
 
 /* ── Database + Start ───────────────────────────────────────────── */
 mongoose
-  .connect(process.env.MONGO_URI || 'mongodb://localhost:27017/nexchat')
+  mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('✅  MongoDB connected');
     const PORT = process.env.PORT || 5000;
