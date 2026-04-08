@@ -25,7 +25,10 @@ const io     = new Server(server, {
 });
 
 /* ── Middleware ─────────────────────────────────────────────────── */
-app.use(cors({ origin: "https://quick-chat-brown.vercel.app",
+app.use(cors({ origin: [
+    "http://localhost:5173",  
+    "https://quick-chat-brown.vercel.app"
+],
   credentials: true
  }));
 app.use(express.json());
